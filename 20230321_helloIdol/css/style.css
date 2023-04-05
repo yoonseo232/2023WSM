@@ -1,3 +1,71 @@
 body{
     background-color: antiquewhite;
 }
+
+
+/* h1과 h2는 plum 배경색 */
+h1,
+h2{
+    /* background-color: plum; */
+}
+
+/* h1 자매 중 첫번째 h2만 plum 배경색 */
+h1 + h2{ /*h1은 적용이 안됨*/
+    /* background-color: plum; */
+}
+
+/* h1의 자매인 모든 h2에 plum 배경색 */
+h1 ~ h2{
+    background-color: plum;
+}
+
+
+ul, /*ul, ol을 줬지만 그 안에 있는 li에 적용됨*/
+ol{ 
+    /* color: #333;
+    font-size: 32px; */
+}
+
+h5 ~ h6, /*h5는 그대로*/
+ul{
+    color: #333;
+    font-size: 32px;
+}
+
+.korea{
+    color: skyblue;
+}
+
+.japan{
+    color: crimson;
+}
+
+.incheon{
+    color: darkblue;
+}
+
+.leader{
+    color: purple;
+}
+
+/*리스트의 5의 배수 행*/
+li:nth-child(5){  
+    text-decoration: underline;
+}
+
+/*리스트의 짝수행 | 짝수 : even, 2n  홀수 : odd*/
+li:nth-child(even){ 
+    background-color: #eee;
+} 
+
+li:nth-child(5n){
+    background-color: #aaa;
+}
+
+[type="text"]{
+    background-color: aqua;
+}
+
+ul:nth-child(2) > li:nth-child(2){
+    text-decoration: overline;
+}
