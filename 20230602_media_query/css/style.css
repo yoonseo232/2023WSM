@@ -1,0 +1,19 @@
+/*Desktop*/
+body{
+    background-color: darkseagreen;
+}
+
+/*Tablet*/
+@media screen and (max-width: 720px) {
+    body{
+        background-color: magenta;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body{
+        background-color: rgb(250, 255, 190);
+    }
+}
+
+/*Mobile*/
