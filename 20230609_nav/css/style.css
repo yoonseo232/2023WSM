@@ -38,11 +38,71 @@ nav{
 }
 
 .nav.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /*기본값 : 수평 정렬*/
+    justify-content: space-between; /*양쪽 정렬*/
+    align-items: center; 
+    color: #fff; 
+    /*padding-left: 16px;
+    padding-right: 16px;*/
+    padding: 0 16px; /*위아래:0, 오왼:16*/
+    font-weight: var(--font-extra-bold);
+}
+
+.nav.container a{ 
+    color: #fff; /*링크 하얗게*/
 }
 
 .nav-list{
     display: flex;
+    column-gap: 80px; /*itme의 열 사이 공간*/
+}
+
+.nav_toggle{
+    font-size: var(--h1-font-size); /*이미지사이즈를 폰트사이즈를 통해 변경해주기*/
+    visibility: hidden; /*햄버거 메뉴 안보이게*/
+}
+
+/*tablet*/
+@media  screen and (max-width: 720px) {
+    
+}
+
+/*mobile*/
+@media  screen and (max-width: 540px) {
+    /*.nav-logo 가운데*/
+    .nav.logo{
+        margin: 0 auto;
+    }
+    
+    .nav-list{
+        position: absolute; /*.nav-list navbar 아래로*/
+        top: 44px; 
+        right: 0; /*너비를 양 옆으로 늘리기*/
+        left: 0; /*너비를 양 옆으로 늘리기*/
+        flex-direction: column; /*수직 배열*/
+        align-items: center; /*교차축*/
+        background-color: rgba(239, 177, 28, 0.4); /*네번째 : 투명도*/
+        backdrop-filter: blur(32px); /*blur 효과*/
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav-item{
+        padding: 1em 0;
+        border-bottom: 2px solid #fff;
+    }
+    
+    .nav-link{
+        display: block;
+    }
+
+    /*.nav-toggle 보이게*/
+    .nav-toggle{
+        visibility: visible;
+        position: absolute; /*.nav-logo 가운데 정렬*/
+        right: 16px; /*오른쪽 여백 16px 워치로*/
+    }
+
+    /*Show-menu하면, .nav-list 보이게*/
+    /*Show-menu하면, .nav-toggle 버튼 X로*/
 }
