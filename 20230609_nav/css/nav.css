@@ -86,6 +86,7 @@ nav{
         backdrop-filter: blur(8px); /* 블러 효과 */
         height: 0;
         overflow: hidden;
+        transition: 0.4s;
     }
     .nav-link {
         display: block;
