@@ -41,13 +41,16 @@ authorDiv.innerHTML = author;
 const publisherDiv = document.getElementsByClassName("publisher")[1];
 publisherDiv.innerHTML = publisher;
 
-// 읽은 날짜 : 임시로 오늘의 날짜 표시하자
-let date = new Date();
+//읽은 날짜: 임시로 오늘의 날짜 표시하자
+let now = new Date();
 //오늘의 날짜 구하자
-let dateString = moment().format("YYYY년 MM월 DD일");
-//html -> js
+let year = now.getFullYear();
+let month = now.getMonth() + 1;
+let date = now.getDate();
+
+//사람이 알아보는 형식으로 바꾸자
+let dateString = `${year}년 ${month}월 ${date}일`;
+//HTML -> js
 const readDateDiv = document.getElementsByClassName("read-date")[1];
+//오늘의 날짜 값 넣자
 readDateDiv.innerHTML = dateString;
-
-
-
