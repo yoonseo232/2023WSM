@@ -1,30 +1,28 @@
-main{
+main {
     margin: 0 auto;
     margin-top: calc(44px + 100px);
-    width: calc(100% - 100px * 2);
+    width: calc(100% - 100px * 2);  
 }
 
-.container{
+.container {
     display: flex;
 }
-
-.image-info-groups{
-    /* flex-wrap: wrap;    태블릿 너비일때 info-groups 전체가 먼저 wrap돼버려서 주석 처리*/
-    
+.image-info-groups {
+    /* flex-wrap: wrap;     태블릿 너비일때 info-groups 전체가 먼저 wrap 돼버려서 주석 처리 */
 }
-
-.info-groups{
+.info-groups {
     flex-wrap: wrap;
     margin: 0 40px;
     gap: 40px;
+    min-width: 200px;       /* ... */
 }
-
-.info-group{
+.info-group {
     flex-direction: column;
     gap: 40px;
+    overflow: hidden;       /* ... */
 }
 
-.info{
+.info {
     flex-direction: column;
 }
 
@@ -33,58 +31,56 @@ main{
 .publisher,
 .read-date,
 .synopsis,
-.phrase{
+.phrase {
     font-size: 1.25rem;
+    white-space: nowrap;    /* ... */
+    overflow: hidden;       /* ... */
+    text-overflow: ellipsis;    /* ... */
 }
-
-.label{
+.label {
     color: #999;
 }
-
 .synopsis > input,
-.phrase > input{
+.phrase > input {
     width: 100%;
     height: 2rem;
 }
 
-.reviews{
+.reviews {
     flex-direction: column;
     margin: 40px 0;
     gap: 40px;
 }
-
-.review{
+.review {
     flex-direction: column;
 }
 
-@media screen and (max-width: 540px){
-    main{
+@media screen and (max-width: 540px) {
+    main {
         margin-top: calc(44px + 40px);
     }
-    .image-info-groups{
+    .image-info-groups {
         flex-direction: column;
     }
-
-    .book-image{
-        margin: 0 auto; /*이미지가 있는 div 가운데로*/   
+    .book-image { 
+        margin: 0 auto;     /* 이미지가 있는 div 가운데로 */
     }
-
-    .info-groups{
+    .info-groups {
         flex-direction: column;
         margin: 40px 0 0;
     }
 }
 
-/* delate me */
-/* main div{
+
+
+/* delete me */
+/* main div {
     border: 2px solid black;
 } */
-
-.book-image{
+.book-image {
     width: 200px;
-    min-width: 200px; /*이미지 너비가 자동으로 줄어드는 문제 해결*/
+    min-width: 200px;   /* 이미지 너비가 자동으로 줄어드는 문제 해결 */
 }
-
-.book-image > img{
-    display: block; /*이미지 아래 살짝 하얀 여백 생기는 문제 해결*/
+.book-image > img {
+    display: block;     /* 이미지 아래 살짝 하얀 여백 생기는 문제 해결 */
 }
