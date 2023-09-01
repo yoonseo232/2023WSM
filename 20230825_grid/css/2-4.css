@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+
+.item{
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.weekday{
+    background-color: rgb(97, 216, 117);
+}
+
+.item:nth-child(7),
+            div:nth-child(13),
+            div:nth-child(18),
+            div:nth-child(23),
+            div:nth-child(26),
+            div:nth-child(32),
+            div:nth-child(37){
+  background-color: rgb(154, 226, 165);
+}
+
+/* .item:nth-child(6n+1){
+  background-color: rgb(154, 226, 165);
+} */
+
+/* .item:nth-child(10),
+            div:nth-child(16),
+            div:nth-child(18),
+            div:nth-child(20),
+            div:nth-child(21),
+            div:nth-child(22),
+            div:nth-child(24),
+            div:nth-child(26),
+            div:nth-child(27),
+            div:nth-child(28),
+            div:nth-child(36),
+            div:nth-child(42){
+    background-color: rgb(195, 244, 202);
+} */
+
+.item:nth-child(10){
+    background-color: rgb(195, 244, 202);
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+.item:nth-child(17){
+    background-color: rgb(195, 244, 202);
+    grid-column:  6 / 7;
+    grid-row: 3 / 5;
+    /* grid-row: 3 / span 2;
+    grid-row: span 2 / 5; */
+}
+
+.item:nth-child(19){
+    background-color: rgb(195, 244, 202);
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(20){
+    background-color: rgb(195, 244, 202);
+    grid-column: 3 / 4;
+    grid-row: 4 / 6;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(21){
+    background-color: rgb(195, 244, 202);
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(31){
+    background-color: rgb(195, 244, 202);
+    grid-column: 6 / 7;
+    grid-row: 6 / 8;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(35){
+    grid-column: 4 / 5;
+    grid-row: 7 / 9;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(36){
+    grid-column: 5 / 6;
+    grid-row: 7 / 9;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(1){
+    background-color: transparent;
+}
