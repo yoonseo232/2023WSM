@@ -30,9 +30,21 @@ main{
     justify-content: center; */
 }
 
+/* 오늘에 맞는 요일 */
 .date.item:nth-child(1){
-    background-color: aquamarine;
     grid-column-start: 6;
+}
+
+
+/* 토요일 */
+.date.item:nth-child(7n+2){
+    color: blue;
+}
+
+/* 일요일 */
+
+.date.item:nth-child(7n+3){
+    color: red;
 }
 
 .review.flex-container{
