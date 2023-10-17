@@ -13,6 +13,11 @@ main{
     margin-bottom: 40px; /*title과 weekday 사이 공간*/
 }
 
+.left, 
+.right{
+    cursor: pointer; /*마우스 커서 손모양*/
+}
+
 .dates.container{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -30,22 +35,22 @@ main{
     justify-content: center; */
 }
 
-/* 오늘에 맞는 요일 */
+/* 오늘에 맞는 요일
 .date.item:nth-child(1){
     grid-column-start: 6;
-}
+} */
 
 
-/* 토요일 */
+/* 토요일
 .date.item:nth-child(7n+2){
     color: blue;
 }
 
-/* 일요일 */
+/* 일요일 
 
 .date.item:nth-child(7n+3){
     color: red;
-}
+} */
 
 .review.flex-container{
     display: flex;
